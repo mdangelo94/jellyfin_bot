@@ -18,6 +18,12 @@ sudo dnf install -y wireguard-tools
 wg --version
 ```
 
+4. installazione git e download repo
+```bash
+sudo yum install -y git
+git clone https://github.com/GiuPic/jellyfin_bot.git
+```
+   
 - Aggiornare il file `/.env` con i propri dati del repo
 
 ## Creare un bot telegram e recuperare il tuo id
