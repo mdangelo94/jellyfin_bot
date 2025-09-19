@@ -1,7 +1,24 @@
-# Installazione Docker con Docker Compose & WireGuard
+# Preparazione server Rocky 9.5
 
-- In base alla distro installare i due pacchetti docker con docker compose e wireguard
-- Aggiornare il file `/.env` con i propri dati
+1. installo rocky 9.5 versione solo terminale con la sola aggiunta del pacchetto che abilita il dhcp
+2. eseguo i comandi per aggiornare il sistema e installare docker:
+```bash
+sudo dnf update -y
+sudo dnf install -y dnf-plugins-core
+sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl enable --now docker
+sudo docker run hello-world
+```
+3. eseguo i comandi per installare wireguard:
+```bash
+sudo dnf update -y
+sudo dnf install -y epel-release
+sudo dnf install -y wireguard-tools
+wg --version
+```
+
+- Aggiornare il file `/.env` con i propri dati del repo
 
 ## Creare un bot telegram e recuperare il tuo id
 - Per creare un nuovo bot telegram cerca BotFather da telegram e lancia /newbot e segui le instruzioni.
