@@ -1,3 +1,19 @@
+# Preparazione server
+1. installo rocky 9.5 versione solo terminale con la sola aggiunta del pacchetto che abilita il dhcp
+2. eseguo i comandi per aggiornare il sistema e installare docker:
+	sudo dnf update -y
+	sudo dnf install -y dnf-plugins-core
+	sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+	sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+	sudo systemctl enable --now docker
+	sudo docker run hello-world
+3. eseguo i comandi per installare wireguard:
+	sudo dnf update -y
+	sudo dnf install -y epel-release
+	sudo dnf install -y wireguard-tools
+	wg --version
+
+
 # Installazione Docker con Docker Compose & WireGuard
 
 - In base alla distro installare i due pacchetti docker con docker compose e wireguard
