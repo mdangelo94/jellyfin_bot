@@ -108,7 +108,7 @@ services:
   
   streaming-community-api:
     build:
-      context: ${HOME_PATH}${APP_PATH}/docker/bot
+      context: ${HOME_PATH}${APP_PATH}/bot
       dockerfile: Dockerfile
     container_name: streaming-community-api
     entrypoint: /bin/bash /app/entrypoint.sh
