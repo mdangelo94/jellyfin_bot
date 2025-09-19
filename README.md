@@ -1,6 +1,6 @@
-# Installazione Docker & WireGuard
+# Installazione Docker con Docker Compose & WireGuard
 
-- In base alla distro installare i due pacchetti docker e wireguard
+- In base alla distro installare i due pacchetti docker con docker compose e wireguard
 - Aggiornare il file `/.env` con i propri dati
 
 ## Creare un bot telegram e recuperare il tuo id
